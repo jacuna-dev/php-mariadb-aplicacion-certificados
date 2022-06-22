@@ -7,9 +7,9 @@ if (!isset($_SESSION['usuario'])) {
 ?>
 
 <!doctype html>
-<html lang="en">
+<html lang="es">
     <head>
-        <title>Title</title>
+        <title>Certificados</title>
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
