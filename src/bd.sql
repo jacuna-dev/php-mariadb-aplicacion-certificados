@@ -69,7 +69,13 @@ ALTER TABLE alumnos_cursos
  * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 INSERT INTO cursos (nombre) VALUES ('Sitio web con PHP');
 INSERT INTO cursos (nombre) VALUES ('Curso de PHP desde cero');
+INSERT INTO cursos (nombre) VALUES ('Curso de piloto Varitech (VF-1)');
+INSERT INTO cursos (nombre) VALUES ('Curso de kendo');
 
 INSERT INTO alumnos (nombre, apellido) VALUES ('Óscar', 'Uh Pérez');
+INSERT INTO alumnos (nombre, apellido) VALUES ('Maximilian', 'Sterling');
+INSERT INTO alumnos (nombre, apellido) VALUES ('Kenshin', 'Himura');
 
 INSERT INTO alumnos_cursos (alumno, curso) VALUES (1, 1);
+INSERT INTO alumnos_cursos (alumno, curso) VALUES (2, 3);
+INSERT INTO alumnos_cursos (alumno, curso) VALUES (3, 4);

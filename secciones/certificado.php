@@ -4,9 +4,7 @@ session_start();
 if (!isset($_SESSION['usuario'])) {
     header('Location: ../index.php');
 }
-?>
 
-<?php
 require_once '../librerias/fpdf/fpdf.php';
 include_once '../configuraciones/bd.php';
 
@@ -65,5 +63,3 @@ agregarTexto($pdf, $nombre . ' ' . $apellido, 125, 90, 'L', 'Helvetica', 30, 0, 
 agregarTexto($pdf, $curso, 100, 135, 'C', 'Helvetica', 20, 0, 84, 115);
 agregarTexto($pdf, date('d/m/Y'), 140, 165, 'L', 'Helvetica', 15, 0, 84, 115);
 $pdf->Output();
-
-?>

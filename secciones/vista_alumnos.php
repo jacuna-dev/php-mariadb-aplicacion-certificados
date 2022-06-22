@@ -27,7 +27,7 @@
                             <div class="mb-3">
                                 <label for="" class="form-label">Cursos del alumno:</label>
                                 <select multiple class="form-control" name="cursos[]" id="listaCursos">
-                                <?php foreach ($cursos as $curso) { ?>
+                                <?php foreach ($cursos as $curso): ?>
                                     <option
                                     <?php
                                         if (!empty($arregloCursos)):
@@ -38,7 +38,7 @@
                                     ?>
                                     value="<?php echo $curso['id'] ?>"><?php echo $curso['id'] ?> - <?php echo $curso['nombre'] ?>
                                     </option>
-                                <?php } ?>
+                                <?php endforeach; ?>
                                 </select>
                             </div>
                             <div class="btn-group" role="group" aria-label="">
@@ -66,10 +66,10 @@
                             <td>
                                 <?php echo $alumno['nombre']; ?> <?php echo $alumno['apellido']; ?>
                                 <br>
-                                <?php foreach ($alumno['cursos'] as $curso) { ?>
+                                <?php foreach ($alumno['cursos'] as $curso): ?>
                                     - <a href="certificado.php?curso=<?php echo $curso['id']; ?>&alumno=<?php echo $alumno['id']; ?>">
                                     <i class="bi bi-filetype-pdf text-danger"></i> <?php echo $curso['nombre'] ?></a><br>
-                                <?php } ?>
+                                <?php endforeach; ?>
                             </td>
                             <td>
                                 <form action="" method="post">
@@ -86,9 +86,8 @@
     </div>
 </div>
 
-<link href="https://cdn.jsdelivr.net/npm/tom-select@2.0.3/dist/css/tom-select.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tom-select@2.0.3/dist/css/tom-select.css">
 <script src="https://cdn.jsdelivr.net/npm/tom-select@2.0.3/dist/js/tom-select.complete.min.js"></script>
-
 <script>
     new TomSelect('#listaCursos');
 </script>
